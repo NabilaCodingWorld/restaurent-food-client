@@ -1,0 +1,41 @@
+/* DailyBlog.css */
+.cafeHouse {
+    position: relative;
+    width: 100%;
+    /* Set a fixed height for the video section */
+    height: 500px; /* Adjust the height as needed */
+    overflow: hidden;
+}
+
+.video-background-cafeHouse {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Place the video behind other content */
+}
+
+.cafeHouse::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Change the opacity value (0.5) as needed */
+    z-index: 0; /* Place the overlay behind the video */
+}
+
+.cafeHouse-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1; 
+}
