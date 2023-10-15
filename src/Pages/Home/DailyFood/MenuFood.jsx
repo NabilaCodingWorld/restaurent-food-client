@@ -1,8 +1,8 @@
 import React from 'react';
 import FoodItem from './FoodItem';
 
-const MenuFood = ({items}) => {
 
+const MenuFood = ({items}) => {
 
     return (
         <div className='grid md:grid-cols-2'>

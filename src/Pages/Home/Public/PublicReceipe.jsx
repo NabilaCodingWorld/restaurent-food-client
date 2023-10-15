@@ -8,10 +8,10 @@ const PublicReceipe = () => {
     const [receipes, setReceipes] = useState([]);
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [postsPerPage, setPostsPerPage] = useState(6);
+    const [postsPerPage, setPostsPerPage] = useState(3);
 
     useEffect(() => {
-        fetch('public.json')
+        fetch('http://localhost:5000/sharedReceipeAll')
             .then(res => res.json())
             .then(data => setReceipes(data))
     }, [])
@@ -21,17 +21,14 @@ const PublicReceipe = () => {
     const currentPosts = receipes.slice(firstPostIndex, lastPageIndex);
 
     return (
-        <div> <br />
-            <div className="hero min-h-screen bg-fixed mt-20" style={{ backgroundImage: `url(${imgbg})` }}>
-                <div className="hero-overlay bg-opacity-60"></div>
+        <div> <br /> <br /> 
+            <div className='divider my-20 text-3xl mx-auto max-w-7xl text-[#E9B64B]'>User Shared Receipe</div>
 
                 <div className='grid md:grid-cols-3 gap-5 my-20 mx-auto max-w-7xl'>
                     {
                         currentPosts.map(receipe => <Receipe key={receipe._id} receipe={receipe}></Receipe>)
                     }
-                </div>
-
-            </div>
+                </div> 
 
             <Pagination
                 totalPosts={receipes.length}
@@ -44,3 +41,5 @@ const PublicReceipe = () => {
 };
 
 export default PublicReceipe;
+
+

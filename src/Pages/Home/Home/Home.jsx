@@ -8,17 +8,28 @@ import MasterChef from '../MasterChef/MasterChef';
 import Gallery from '../Gallery/Gallery';
 import ClientReview from '../ClientReview/ClientReview';
 import PublicReceipe from '../Public/PublicReceipe';
+import GoogleMap from '../GoogleMap/GoogleMap';
+import Contact from '../Contact/Contact';
+import { FaArrowUp } from 'react-icons/fa';
 
 const Home = () => {
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+        });
+    };
+
     return (
         <div>
             <Banner></Banner>
 
-            <Services></Services>
+            <Services></Services> <br /> <br />
 
             <AboutUs></AboutUs>
 
-            <DailyFood></DailyFood>
+            <DailyFood></DailyFood> <br /> <br />
 
             <BookTable></BookTable>
 
@@ -29,6 +40,15 @@ const Home = () => {
             <ClientReview></ClientReview>
 
             <PublicReceipe></PublicReceipe>
+
+            <GoogleMap></GoogleMap>
+
+            <Contact></Contact>
+
+            <div className="md:ml-[1400px] ml-2 mt-10 " style={{ position: 'fixed', top: '500px', width: '100%', zIndex: '1' }}> <br /> <br />
+                {/* Your portfolio content */}
+                <button onClick={scrollToTop}> <FaArrowUp className='w-10 h-5 text-[#E9B64B]'></FaArrowUp> </button>
+            </div> <br /> <br />
 
         </div>
     );

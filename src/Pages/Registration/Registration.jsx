@@ -1,6 +1,8 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Registration = () => {
     const { createUser, updateProfileData } = useContext(AuthContext);
@@ -58,12 +60,19 @@ const Registration = () => {
 
     }
 
-
+    useEffect(() => {
+        AOS.init({
+            offset: 200,
+            easing: 'ease-in-sine',
+            duration: 600
+        });
+    }, []);
 
     return (
         <div>
-            <div className="flex flex-col items-center pt-20 min-h-screen bg-gray-200">
-                <form onSubmit={handleRegistrationSubmit} className="w-full max-w-sm bg-white rounded-lg shadow-md p-6">
+            <div className="flex flex-col items-center min-h-screen bg-gray-200">
+                <div className='divider mx-20 my-20 text-3xl text-[#E9B64B]'>Registration</div>
+                <form data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" onSubmit={handleRegistrationSubmit} className="w-full max-w-sm bg-white rounded-lg shadow-md p-6">
                     <div className="mb-4">
                         <label htmlFor="text" className="block text-gray-700 text-sm font-bold mb-2">Name</label>
 

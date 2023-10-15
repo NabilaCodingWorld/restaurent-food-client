@@ -7,7 +7,7 @@ const Review = ({reviewOne}) => {
     const {review, img, name, date} = reviewOne;
 
     return (
-        <center className='shadow-xl hover:shadow-2xl mt-20 p-10 w-80 ml-10'>
+        <center className='bg-white bg-opacity-50 hover:shadow-2xl rounded-2xl  p-10 w-80 ml-10'>
             <FaQuoteLeft className='text-center mb-5 h-12 w-12'></FaQuoteLeft>
             <p>{review}</p> <br />
             

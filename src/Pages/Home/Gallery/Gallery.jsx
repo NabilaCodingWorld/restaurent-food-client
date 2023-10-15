@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -17,10 +19,22 @@ import img5 from '../../../assets/5.avif'
 import img6 from '../../../assets/6.avif'
 
 const Gallery = () => {
+
+    useEffect(() => {
+        AOS.init({
+            offset: 200,
+            easing: 'ease-in-sine',
+            duration: 600
+        });
+    }, []);
+
     return (
         <div className='mx-auto max-w-7xl my-20'>
+
+            <div className='divider text-3xl my-20 text-[#E9B64B]'>Food Gallery</div>
            
             <Swiper
+            data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000"
                 slidesPerView={3}
                 spaceBetween={30}
                 pagination={{
@@ -31,55 +45,55 @@ const Gallery = () => {
             >
                 <SwiperSlide>
                     <div className="group inline-block overflow-hidden relative">
-                        <img className="h-80 w-full transition-transform transform group-hover:scale-110" src={img1} alt="" />
+                        <img className="md:h-80 h-40 w-full transition-transform transform group-hover:scale-110" src={img1} alt="" />
                     </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <div className="group inline-block overflow-hidden relative">
-                        <img className="h-80 w-full transition-transform transform group-hover:scale-110" src={img2} alt="" />
+                        <img className="md:h-80 h-40 w-full transition-transform transform group-hover:scale-110" src={img2} alt="" />
                     </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <div className="group inline-block overflow-hidden relative">
-                        <img className="h-80 w-full transition-transform transform group-hover:scale-110" src={img3} alt="" />
+                        <img className="md:h-80 h-40 w-full transition-transform transform group-hover:scale-110" src={img3} alt="" />
                     </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <div className="group inline-block overflow-hidden relative">
-                        <img className="h-80 w-full transition-transform transform group-hover:scale-110" src={img4} alt="" />
+                        <img className="md:h-80 h-40 w-full transition-transform transform group-hover:scale-110" src={img4} alt="" />
                     </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <div className="group inline-block overflow-hidden relative">
-                        <img className="h-80 w-full transition-transform transform group-hover:scale-110" src={img5} alt="" />
+                        <img className="md:h-80 h-40 w-full transition-transform transform group-hover:scale-110" src={img5} alt="" />
                     </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <div className="group inline-block overflow-hidden relative">
-                        <img className="h-80 w-full transition-transform transform group-hover:scale-110" src={img6} alt="" />
+                        <img className="md:h-80 h-40 w-full transition-transform transform group-hover:scale-110" src={img6} alt="" />
                     </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <div className="group inline-block overflow-hidden relative">
-                        <img className="h-80 w-full transition-transform transform group-hover:scale-110" src={img1} alt="" />
+                        <img className="md:h-80 h-40 w-full transition-transform transform group-hover:scale-110" src={img1} alt="" />
                     </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <div className="group inline-block overflow-hidden relative">
-                        <img className="h-80 w-full transition-transform transform group-hover:scale-110" src={img2} alt="" />
+                        <img className="md:h-80 h-40 w-full transition-transform transform group-hover:scale-110" src={img2} alt="" />
                     </div>
                 </SwiperSlide>
 
                 <SwiperSlide>
                     <div className="group inline-block overflow-hidden relative">
-                        <img className="h-80 w-full transition-transform transform group-hover:scale-110" src={img3} alt="" />
+                        <img className="md:h-80 h-40 w-full transition-transform transform group-hover:scale-110" src={img3} alt="" />
                     </div>
                 </SwiperSlide>
 

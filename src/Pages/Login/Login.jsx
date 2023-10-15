@@ -1,7 +1,9 @@
-import React, { useContext, useRef, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../provider/AuthProvider';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Login = () => {
     const { googleLogIn, loggIn} = useContext(AuthContext);
@@ -55,10 +57,20 @@ const Login = () => {
         })
     }
 
+    useEffect(() => {
+        AOS.init({
+            offset: 200,
+            easing: 'ease-in-sine',
+            duration: 600
+        });
+    }, []);
+
     return (
         <div>
-            <div className="flex flex-col items-center pt-20 min-h-screen bg-gray-200">
-                <form onSubmit={handleLogIn} className="w-full max-w-sm bg-white rounded-lg shadow-md p-6">
+            <div className="flex flex-col items-center  min-h-screen bg-gray-200">
+
+                <div className='divider mx-20 my-20 text-3xl text-[#E9B64B]'>Log In</div>
+                <form data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" onSubmit={handleLogIn} className="w-full max-w-sm bg-white rounded-lg shadow-md p-6">
                     <div className="mb-4">
                         <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">Email</label>
 
@@ -79,7 +91,7 @@ const Login = () => {
                     <p className='mt-5 text-center text-blue-500'> <Link to='/registration'>Go To Registration Page </Link> </p>
                 </form>
 
-                <button onClick={handleGoogleLogIn} className="btn btn-warning w-80 mt-5 rounded-lg"> <FaGoogle className='mr-5 text-blue-500'></FaGoogle> Google</button>
+                <button data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" onClick={handleGoogleLogIn} className="btn btn-warning w-80 mt-5 rounded-lg"> <FaGoogle className='mr-5 text-blue-500'></FaGoogle> Google</button>
 
                     <br />
                 <p className='text-center text-red-700 font-bold'> {error} </p>

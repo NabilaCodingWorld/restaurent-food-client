@@ -1,23 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const FoodItem = ({ item }) => {
 
     const { name, recipe, price, image } = item;
 
+    useEffect(() => {
+        AOS.init({
+            offset: 200,
+            easing: 'ease-in-sine',
+            duration: 600
+        });
+    }, []);
+
     return (
-        <div className='grid md:grid-cols-2 gap-10 justify-center items-center my-2'>
+        <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" className='grid md:grid-cols-2 gap-10 justify-center items-center my-2'>
             <div className='grid md:grid-cols-2 gap-10 justify-center items-center'>
 
                 <div className="group inline-block overflow-hidden relative">
-                    <img className="w-full transition-transform transform group-hover:scale-110" src={image} alt="" />
+                    <img className="md:w-full w-40 transition-transform transform group-hover:scale-110" src={image} alt="" />
                 </div>
 
                 <div>
-                    <p className='text-xl font-bold my-2'>{name}</p>
-                    <p>{recipe}</p>
+                    <p className='md:text-xl text-sm font-bold my-2'>{name}</p>
+                    <p className='text-sm md:w-full w-40'>{recipe}</p>
                 </div>
             </div>
-            <p className='text-2xl font-bold text-[#E9B64B]'>${price}</p>
+            <p className='md:text-2xl text-sm font-bold text-[#E9B64B]'>${price}</p>
         </div>
     );
 };
