@@ -27,9 +27,7 @@ const Booking = () => {
         console.log(submitData);
 
 
-
-
-        fetch('http://localhost:5000/booking', {
+        fetch('https://restaurent-food-server.vercel.app/booking', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -64,7 +62,7 @@ const Booking = () => {
 
 
                 <div className="flex items-center justify-center my-20">
-                    <div className="max-w-md w-[1000px] space-y-8 p-8 bg-white rounded-lg shadow-md bg-opacity-50">
+                    <div className="max-w-md md:w-[1000px] space-y-8 p-8 bg-white rounded-lg shadow-md bg-opacity-50">
                         <h2 className="text-2xl font-extrabold text-center">Book A Table</h2>
 
                         <center className='flex gap-10 justify-center'><Link to="/manageTable"><FaEdit className='h-8 w-8'></FaEdit></Link>

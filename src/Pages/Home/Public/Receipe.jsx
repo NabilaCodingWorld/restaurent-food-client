@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 
 const Receipe = ({ receipe }) => {
 
-    const { email ,photo, name, description, ingredient, _id } = receipe;
+    const { email, photo, name, description, ingredient, _id } = receipe;
 
     const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -29,47 +29,52 @@ const Receipe = ({ receipe }) => {
     return (
         <div>
 
-            <div  data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" className='shadow-2xl bg-white text-black p-10 bg-opacity-50 rounded-2xl'>
+            <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" className='shadow-2xl bg-white text-black md:p-10 p-2 bg-opacity-50 rounded-2xl'>
                 <p className='text-center text-3xl mb-4 font-bold'>{name}</p>
                 <div className="group inline-block overflow-hidden relative">
-                    <img className="h-full w-full transition-transform transform group-hover:scale-110" src={photo} alt="" />
-                </div> 
+                    <img className="md:h-96 md:w-96 transition-transform transform group-hover:scale-110" src={photo} alt="" />
+                </div>
 
                 <p className='text-center text-2xl my-3 text-gray-400'>{email}</p>
-                
+
 
                 <center><FaArrowRight onClick={openModal} className='text-[#E9B64B] w-8 h-8'></FaArrowRight></center>
 
                 {/* Modal */}
-            <Modal
-                isOpen={isModalOpen}
-                onRequestClose={closeModal}
-                contentLabel="About Details Modal"
-                
+                <center>
+                    <Modal
+                        isOpen={isModalOpen}
+                        onRequestClose={closeModal}
+                        contentLabel="About Details Modal"
 
-                style={{
-                    overlay: {
-                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
-                    },
-                    content: {
-                        width: '80%',
-                        height: '500px', // Adjust the width as needed
-                        margin: 'auto',
-                        padding: '50px',
-                        border: 'none', // Remove border
-                        borderRadius: '8px',
-                        boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
-                    },
-                }}
 
-            >
-                <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={closeModal}>✕</button>
-                
-                <h3 className="font-bold text-3xl text-center">This is {name}</h3>
+                        style={{
+                            overlay: {
+                                backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                            },
+                            content: {
+                                width: '90%', // 90% of the screen width
+                                maxWidth: '90vw', // Set a maximum width based on viewport width
+                                height: '90vh', // 90% of the screen height
+                                maxHeight: '90vh', // Set a maximum height based on viewport height
+                                margin: 'auto',
+                                padding: '4% 4% 3%', // Adjust padding as a percentage of content area
+                                border: 'none', // Remove border
+                                borderRadius: '8px',
+                                boxShadow: '0 2px 4px rgba(0, 0, 0, 0.1)',
+                            },
+                        }}
 
-                <p className="py-4 text-xl"><span className='font-bold'>Description:</span> {description}</p> <br />
-                <p className='text-xl'><span className='font-bold'>Ingrediant: </span>{ingredient}</p>
-            </Modal>
+
+                    >
+                        <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={closeModal}>✕</button>
+
+                        <h3 className="font-bold md:text-3xl text-center">This is {name}</h3>
+
+                        <p className="py-4 md:text-xl"><span className='font-bold'>Description:</span> {description}</p> <br />
+                        <p className='md:text-xl'><span className='font-bold'>Ingrediant: </span>{ingredient}</p>
+                    </Modal>
+                </center>
             </div>
 
         </div>

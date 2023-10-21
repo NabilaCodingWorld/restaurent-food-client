@@ -18,24 +18,24 @@ const Services = () => {
 
     return (
 
-        <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000">
-            <div className='grid md:grid-cols-3 gap-20 mx-auto max-w-7xl text-center mt-20'>
+        <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="2000">
+            <div className='grid md:grid-cols-3 gap-20 md:mx-auto md:max-w-7xl text-center mt-20 mx-3'>
                     <div className='hover:bg-[#E9B64B] p-3 duration-700 rounded-2xl'>
                         <center><img src={icon1} alt="" /></center> <br />
                         <p className='md:text-2xl text-sm'>QUALITY  FOODS</p> <br />
-                        <p className='md:text-xl text-sm md:w-full w-60 text-center'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat nobis aliquam nisi facere iste repellendus necessitatibus rem nesciunt vero, tempora, ex sapiente aperiam saepe quae, doloribus reprehenderit provident? Consectetur, dolor!</p>
+                        <p className='md:text-xl ml-12 md:ml-0 text-sm md:w-full w-60 text-center'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat nobis aliquam nisi facere iste repellendus necessitatibus rem nesciunt vero, tempora, ex sapiente aperiam saepe quae, doloribus reprehenderit provident? Consectetur, dolor!</p>
                     </div>
 
                     <div className='hover:bg-[#E9B64B] p-3 duration-700 rounded-2xl'>
                         <center><img src={icon1} alt="" /></center> <br />
                         <p className='md:text-2xl text-sm'>QUALITY  FOODS</p> <br />
-                        <p className='md:text-xl text-sm md:w-full w-60 text-center'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat nobis aliquam nisi facere iste repellendus necessitatibus rem nesciunt vero, tempora, ex sapiente aperiam saepe quae, doloribus reprehenderit provident? Consectetur, dolor!</p>
+                        <p className='md:text-xl text-sm md:w-full w-60 text-center ml-12 md:ml-0'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat nobis aliquam nisi facere iste repellendus necessitatibus rem nesciunt vero, tempora, ex sapiente aperiam saepe quae, doloribus reprehenderit provident? Consectetur, dolor!</p>
                     </div>
 
                     <div className='hover:bg-[#E9B64B] p-3 duration-700 rounded-2xl'>
                         <center><img src={icon1} alt="" /></center> <br />
                         <p className='md:text-2xl text-sm'>QUALITY  FOODS</p> <br />
-                        <p className='md:text-xl text-sm md:w-full w-60 text-center'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat nobis aliquam nisi facere iste repellendus necessitatibus rem nesciunt vero, tempora, ex sapiente aperiam saepe quae, doloribus reprehenderit provident? Consectetur, dolor!</p>
+                        <p className='md:text-xl text-sm md:w-full w-60 text-center ml-12 md:ml-0'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat nobis aliquam nisi facere iste repellendus necessitatibus rem nesciunt vero, tempora, ex sapiente aperiam saepe quae, doloribus reprehenderit provident? Consectetur, dolor!</p>
                     </div>
 
                 </div>

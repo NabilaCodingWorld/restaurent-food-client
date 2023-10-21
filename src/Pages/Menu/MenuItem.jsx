@@ -15,9 +15,11 @@ const MenuItem = ({ menu }) => {
 
     return (
         <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" className='my-20'> <br /> <br />
-            <div className='grid md:grid-cols-2 gap-10 justify-center items-center'>
+            <div className='grid md:grid-cols-2 md:gap-10 gap-5 justify-center items-center'>
                 <div className="group inline-block overflow-hidden relative">
-                    <img className="md:h-80 w-full transition-transform transform group-hover:scale-110" src={image} alt="" />
+                    <center>
+                        <img className="md:h-80 md:w-full w-40 h-40 transition-transform transform group-hover:scale-110" src={image} alt="" />
+                    </center>
 
                 </div>
 

@@ -14,6 +14,8 @@ import ManageTable from "../Pages/Home/BookTable/ManageTable";
 import UpdateTable from "../Pages/Home/BookTable/UpdateTable";
 import ManageShareReceipe from "../Pages/SharedReceipe/ManageShareReceipe";
 import UpdateShare from "../Pages/SharedReceipe/UpdateShare";
+import Blog from "../Pages/Blog/Blog";
+import LearnMore from "../Pages/Home/AboutUs/LearnMore";
 
 
   export const router = createBrowserRouter([
@@ -46,6 +48,14 @@ import UpdateShare from "../Pages/SharedReceipe/UpdateShare";
             element: <Menu></Menu>
         },
         {
+            path: "/blog",
+            element: <Blog></Blog>
+        },
+        {
+            path: "/learn",
+            element: <LearnMore></LearnMore>
+        },
+        {
             path: "/shared",
             element: <PrivateRoute><SharedReceipe></SharedReceipe></PrivateRoute>
         },
@@ -56,19 +66,19 @@ import UpdateShare from "../Pages/SharedReceipe/UpdateShare";
         {
           path: "/chef/:_id",
           element: <PrivateRoute><ChefDetail></ChefDetail></PrivateRoute>,
-          loader: ({ params }) => fetch(`http://localhost:5000/chef/${params._id}`)
+          loader: ({ params }) => fetch(`https://restaurent-food-server.vercel.app/chef/${params._id}`)
         },
 
         {
           path: 'manageTable/update/:_id',
           element: <PrivateRoute><UpdateTable></UpdateTable></PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/booking/${params._id}`)
+          loader: ({params}) => fetch(`https://restaurent-food-server.vercel.app/booking/${params._id}`)
         },
 
         {
           path: 'manageSharedReceipe/updateShare/:_id',
           element: <PrivateRoute> <UpdateShare></UpdateShare> </PrivateRoute>,
-          loader: ({params}) => fetch(`http://localhost:5000/sharedReceipe/${params._id}`)
+          loader: ({params}) => fetch(`https://restaurent-food-server.vercel.app/sharedReceipe/${params._id}`)
         },
       ]
     },

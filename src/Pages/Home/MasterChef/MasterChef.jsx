@@ -10,7 +10,7 @@ const MasterChef = () => {
     const [postsPerPage, setPostsPerPage] = useState(6);
 
     useEffect(() => {
-        fetch('http://localhost:5000/chef')
+        fetch('https://restaurent-food-server.vercel.app/chef')
             .then(res => res.json())
             .then(data => setCooks(data))
     }, [])
@@ -20,7 +20,7 @@ const MasterChef = () => {
     const currentPosts = cooks.slice(firstPostIndex, lastPageIndex);
 
     return (
-        <div className='max-w-7xl mx-auto mt-20'>
+        <div className='md:max-w-7xl md:mx-auto mt-20 mx-5'>
 
             <div className='divider md:text-3xl my-20 text-[#E9B64B]'>Our Master Chef Receipe</div>
 

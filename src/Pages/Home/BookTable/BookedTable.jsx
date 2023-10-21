@@ -20,10 +20,10 @@ const BookedTable = ({ booking }) => {
             data-aos="fade-up"
             data-aos-offset="200"
             data-aos-duration="1000"
-            className="md:p-10 p-2 rounded-2xl shadow-2xl"
+            className="md:p-10  rounded-2xl shadow-2xl hover:bg-[#E9B64B] p-3 duration-700"
         >
             <div className="avatar">
-                <div className="w-24 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                <div className="w-24 rounded-full ring ring-primary ring-offset-base-200 ring-offset-2">
                     <img src={photo} />
                 </div>
             </div>

@@ -13,7 +13,7 @@ const Contact = () => {
         });
     }, []);
 
-  const form = useRef();
+    const form = useRef();
     const [formData, setFormData] = useState({
         to_name: '',
         from_name: '',
@@ -48,14 +48,14 @@ const Contact = () => {
 
     return (
         <div className='my-20'>
-            <div className='divider max-w-7xl my-20 mx-auto text-5xl text-[#E9B64B]'>Contact</div>
+            <div className='divider mx-5 md:max-w-7xl my-20 md:mx-auto md:text-4xl text-[#E9B64B]'>Contact</div>
 
 
             <div className="hero min-h-screen bg-fixed" style={{ backgroundImage: 'url(https://img.freepik.com/free-photo/pizza-with-salami-tomato-cheese-mushrooms_2829-20001.jpg?w=740&t=st=1697282534~exp=1697283134~hmac=c4d054607aecad8edc11186e670d9f0e6505e88ddb8a466a5e594243b89c37a1)' }}>
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content  text-neutral-content">
 
-                    <form  ref={form} onSubmit={sendEmail} data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000">
+                    <form ref={form} onSubmit={sendEmail} data-aos="fade-up" data-aos-offset="200" data-aos-duration="2000">
                         <div className="md:max-w-md md:w-[1000px] bg-black p-10 bg-opacity-50 text-black mx-auto rounded-xl">
                             <label className="block font-bold mb-2 text-white text-xl" htmlFor="to_name">
                                 Name
@@ -67,7 +67,7 @@ const Contact = () => {
                                 name="to_name"
                                 placeholder="Enter your name"
                                 value={formData.to_name}
-                                    onChange={handleChange}
+                                onChange={handleChange}
 
                             />
 
@@ -81,7 +81,7 @@ const Contact = () => {
                                 name="from_name"
                                 placeholder="Enter your email"
                                 value={formData.from_name}
-                                    onChange={handleChange}
+                                onChange={handleChange}
 
                             />
 
@@ -110,8 +110,6 @@ const Contact = () => {
                     {message && <p className="text-white text-center text-xl mt-4">{message}</p>}
                 </div>
             </div>
-
-
 
         </div>
     );

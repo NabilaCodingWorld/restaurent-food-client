@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import MenuFood from './MenuFood';
-import './DailyFood.css'
+// import './DailyFood.css'
 
 
 const DailyFood = () => {
@@ -17,7 +17,7 @@ const DailyFood = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:5000/dailyFood')
+        fetch('https://restaurent-food-server.vercel.app/dailyFood')
             .then(res => res.json())
             .then(data => setFoods(data));
     }, []);
@@ -34,15 +34,15 @@ const DailyFood = () => {
         <div className='mx-auto max-w-7xl'>
 
             <div> <br /> <br />
-                <div className='divider md:mx-40 md:text-2xl text-[#E9B64B] mb-2'>Food Menu</div>
+                <div className='divider md:mx-40 mx-5 md:text-2xl text-[#E9B64B] mb-2'>Food Menu</div>
                 <p className='md:text-4xl mb-10 text-center'>Most Popular Item</p>
             </div>
             <Tabs  selectedIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <center>
                     <TabList>
 
-                        <div>
-                            <Tab>  Breakfast</Tab>
+                        <div className='mx-16'>
+                            <Tab>Breakfast</Tab>
                             <Tab>Lunch</Tab>
                             <Tab>Snacks</Tab>
                             <Tab>Dinner</Tab>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../provider/AuthProvider';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from 'react-helmet-async';
 
 const Registration = () => {
     const { createUser, updateProfileData } = useContext(AuthContext);
@@ -70,6 +71,8 @@ const Registration = () => {
 
     return (
         <div>
+            <Helmet> <title>Foodie | Sign Up</title> </Helmet>
+            
             <div className="flex flex-col items-center min-h-screen bg-gray-200">
                 <div className='divider mx-20 my-20 text-3xl text-[#E9B64B]'>Registration</div>
                 <form data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" onSubmit={handleRegistrationSubmit} className="w-full max-w-sm bg-white rounded-lg shadow-md p-6">

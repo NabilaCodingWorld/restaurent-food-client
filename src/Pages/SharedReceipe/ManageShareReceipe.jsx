@@ -11,7 +11,7 @@ const ManageShareReceipe = () => {
 
     const [myShares, setMyShares] = useState([]);
 
-    const url = `http://localhost:5000/sharedReceipe?email=${user.email}`;
+    const url = `https://restaurent-food-server.vercel.app/sharedReceipe?email=${user.email}`;
 
 
     useEffect(() => {
@@ -37,7 +37,7 @@ const ManageShareReceipe = () => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/sharedReceipe/${_id}`, {
+                fetch(`https://restaurent-food-server.vercel.app/sharedReceipe/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

@@ -10,7 +10,7 @@ const ManageTable = () => {
 
     const [bookings, setBookings] = useState([]);
 
-    const url = `http://localhost:5000/booking?email=${user?.email}`;
+    const url = `https://restaurent-food-server.vercel.app/booking?email=${user?.email}`;
 
     useEffect(()=>{
         fetch(url)
@@ -31,7 +31,7 @@ const ManageTable = () => {
         }).then((result) => {
           if (result.isConfirmed) {
     
-            fetch(`http://localhost:5000/booking/${_id}`, {
+            fetch(`https://restaurent-food-server.vercel.app/booking/${_id}`, {
               method: 'DELETE'
             })
               .then(res => res.json())

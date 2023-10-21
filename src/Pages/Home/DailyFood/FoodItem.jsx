@@ -15,8 +15,8 @@ const FoodItem = ({ item }) => {
     }, []);
 
     return (
-        <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" className='grid md:grid-cols-2 gap-10 justify-center items-center my-2'>
-            <div className='grid md:grid-cols-2 gap-10 justify-center items-center'>
+        <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="2000" className='grid md:grid-cols-2 md:gap-10  gap-2 justify-center items-center my-2'>
+            <div className='grid md:grid-cols-2 md:gap-10 gap-3 justify-center items-center'>
 
                 <div className="group inline-block overflow-hidden relative">
                     <img className="md:w-full w-40 transition-transform transform group-hover:scale-110" src={image} alt="" />
@@ -27,7 +27,7 @@ const FoodItem = ({ item }) => {
                     <p className='text-sm md:w-full w-40'>{recipe}</p>
                 </div>
             </div>
-            <p className='md:text-2xl text-sm font-bold text-[#E9B64B]'>${price}</p>
+            <p className='md:text-2xl text-sm font-bold text-[#E9B64B]'>${price}</p> <br />
         </div>
     );
 };

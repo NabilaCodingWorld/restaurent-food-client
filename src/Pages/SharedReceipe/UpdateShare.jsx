@@ -23,7 +23,7 @@ const UpdateShare = () => {
                 ingredient, _id }
             console.log(submitData);
 
-            fetch(`http://localhost:5000/sharedReceipe/${_id}`, {
+            fetch(`https://restaurent-food-server.vercel.app/sharedReceipe/${_id}`, {
                 method: 'PUT',
                 headers: {
                     'content-type': 'application/json'

@@ -11,7 +11,7 @@ const PublicReceipe = () => {
     const [postsPerPage, setPostsPerPage] = useState(3);
 
     useEffect(() => {
-        fetch('http://localhost:5000/sharedReceipeAll')
+        fetch('https://restaurent-food-server.vercel.app/sharedReceipeAll')
             .then(res => res.json())
             .then(data => setReceipes(data))
     }, [])
@@ -22,9 +22,9 @@ const PublicReceipe = () => {
 
     return (
         <div> <br /> <br /> 
-            <div className='divider my-20 text-3xl mx-auto max-w-7xl text-[#E9B64B]'>User Shared Receipe</div>
+            <div className='divider my-20 md:text-4xl  md:mx-auto md:max-w-7xl mx-5 text-[#E9B64B]'>User Shared Receipe</div>
 
-                <div className='grid md:grid-cols-3 gap-5 my-20 mx-auto max-w-7xl'>
+                <div className='grid md:grid-cols-3 gap-5 my-20 md:mx-auto md:max-w-7xl mx-5'>
                     {
                         currentPosts.map(receipe => <Receipe key={receipe._id} receipe={receipe}></Receipe>)
                     }

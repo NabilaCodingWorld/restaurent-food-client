@@ -25,7 +25,7 @@ const UpdateTable = () => {
 
 
 
-        fetch(`http://localhost:5000/booking/${_id}`, {
+        fetch(`https://restaurent-food-server.vercel.app/booking/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'

@@ -16,7 +16,7 @@ const Cook = ({cook}) => {
     }, []);
 
     return (
-        <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000" className='shadow-lg md:p-10 p-2 hover:shadow-2xl rounded-2xl'>
+        <div data-aos="fade-up" data-aos-offset="200" data-aos-duration="2000" className='shadow-lg md:p-10 p-2 hover:shadow-2xl rounded-2xl'>
             <center>
             <img className='rounded-full h-60 w-60'  src={img} alt="" />
 

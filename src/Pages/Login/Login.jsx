@@ -4,6 +4,7 @@ import { FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../provider/AuthProvider';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
     const { googleLogIn, loggIn} = useContext(AuthContext);
@@ -67,6 +68,7 @@ const Login = () => {
 
     return (
         <div>
+            <Helmet> <title>Foodie | Log In</title> </Helmet>
             <div className="flex flex-col items-center  min-h-screen bg-gray-200">
 
                 <div className='divider mx-20 my-20 text-3xl text-[#E9B64B]'>Log In</div>

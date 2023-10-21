@@ -26,21 +26,22 @@ const Navbar = () => {
     }
 
     const navOption = <>
-        <li> <Link to="/"><a className='hover:text-white'>Home</a></Link> </li>
+        <Link to="/"> <li><a className='hover:text-white'>Home</a></li> </Link>
 
-        <li> <Link to="/menu"><a className='hover:text-white'>Menu</a></Link> </li>
+        <Link to="/menu"><li><a className='hover:text-white'>Menu</a></li> </Link> 
 
-        <li> <Link to="/blog"><a className='hover:text-white'>Blog</a></Link> </li>
+        <Link to="/blog"><li><a className='hover:text-white'>Blog</a></li></Link> 
 
 
 
         {
             user ?
                 <>
-                    <li> <Link to="/shared"><a className='hover:text-white'>Share Receipe</a></Link> </li>
-                    <li><button onClick={handleLogOut}>Log Out</button></li>
+                    <Link to="/shared"> <li><a className='hover:text-white'>Share Receipe</a></li> </Link> 
+
+                    <li><button onClick={handleLogOut}><a className='hover:text-white'>Log Out</a></button></li>
                 </>
-                : <li> <Link to="/login"><a className='hover:text-white'>Log In</a></Link> </li>
+                : <Link to="/login"> <li><a className='hover:text-white'>Log In</a></li> </Link> 
         }
 
     </>
@@ -66,7 +67,7 @@ const Navbar = () => {
                         {navOption}
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end mr-5">
                     {user && (
                         <div >
                             {renderAvatar()}

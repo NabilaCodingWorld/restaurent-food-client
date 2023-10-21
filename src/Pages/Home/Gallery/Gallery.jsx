@@ -31,10 +31,10 @@ const Gallery = () => {
     return (
         <div className='mx-auto max-w-7xl my-20'>
 
-            <div className='divider text-3xl my-20 text-[#E9B64B]'>Food Gallery</div>
+            <div className='divider md:text-3xl mx-5 my-20 text-[#E9B64B]'>Food Gallery</div>
            
             <Swiper
-            data-aos="fade-up" data-aos-offset="200" data-aos-duration="1000"
+            data-aos="fade-up" data-aos-offset="200" data-aos-duration="2000"
                 slidesPerView={3}
                 spaceBetween={30}
                 pagination={{
